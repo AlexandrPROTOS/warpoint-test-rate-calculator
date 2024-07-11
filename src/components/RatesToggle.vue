@@ -20,6 +20,7 @@ const getYearlyBenefit = (rate: Rate): string => {
   return roundPrice(monthlyPrice * 12 - yearlyPrice);
 };
 </script>
+
 <template>
   <ul class="rates">
     <li
@@ -37,7 +38,8 @@ const getYearlyBenefit = (rate: Rate): string => {
       </p>
       <template v-if="ratesStore.selectedTerm.value === 'year'">
         <p>
-          Цена за месяц: {{ roundPrice(rate.variants.year / 12) }}
+          Цена за месяц:
+          {{ roundPrice((rate.variants.year / 12) * currenciesStore.selectedCurrency.value) }}
           {{ currenciesStore.selectedCurrency.name }}
         </p>
         <p>
