@@ -9,7 +9,6 @@ export const simulateOrder = (): void => {
   setTimeout(() => {
     loading.close();
     ElNotification({
-      duration: 500000,
       title: 'Готово',
       message: 'Подписка успешно оформлена',
       type: 'success'
