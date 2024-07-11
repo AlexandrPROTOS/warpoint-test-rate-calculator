@@ -1,0 +1,17 @@
+@import 'normalize.css';
+@import 'element-plus/dist/index.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  background-color: rgb(29, 28, 28);
+}
+
+.el-notification {
+  --el-notification-width: 290px;
+}
